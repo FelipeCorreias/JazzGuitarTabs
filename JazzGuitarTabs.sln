@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.Domain", "JazzGuitarTabs.Domain\JazzGuitarTabs.Domain.csproj", "{F09758AC-A10A-4733-B098-2D123583880B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F09758AC-A10A-4733-B098-2D123583880B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09758AC-A10A-4733-B098-2D123583880B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09758AC-A10A-4733-B098-2D123583880B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09758AC-A10A-4733-B098-2D123583880B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F748A6BD-7690-4161-9BE3-8D34E699F7C7}
+	EndGlobalSection
+EndGlobal
