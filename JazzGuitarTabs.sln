@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.Domain", "JazzGuitarTabs.Domain\JazzGuitarTabs.Domain.csproj", "{F09758AC-A10A-4733-B098-2D123583880B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Domain", "JazzGuitarTabs.Domain\JazzGuitarTabs.Domain.csproj", "{F09758AC-A10A-4733-B098-2D123583880B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Persistance", "JazzGuitarTabs.Persistance\JazzGuitarTabs.Persistance.csproj", "{0D2683D4-C486-4EC1-88DF-6E2B8341296E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.Application", "JazzGuitarTabs.Application\JazzGuitarTabs.Application.csproj", "{F836A599-214F-4781-B8EA-9CCA9D7321FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F09758AC-A10A-4733-B098-2D123583880B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F09758AC-A10A-4733-B098-2D123583880B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F09758AC-A10A-4733-B098-2D123583880B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D2683D4-C486-4EC1-88DF-6E2B8341296E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D2683D4-C486-4EC1-88DF-6E2B8341296E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D2683D4-C486-4EC1-88DF-6E2B8341296E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D2683D4-C486-4EC1-88DF-6E2B8341296E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
