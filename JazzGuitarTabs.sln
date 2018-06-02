@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Domain", "Ja
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Persistance", "JazzGuitarTabs.Persistance\JazzGuitarTabs.Persistance.csproj", "{0D2683D4-C486-4EC1-88DF-6E2B8341296E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.Application", "JazzGuitarTabs.Application\JazzGuitarTabs.Application.csproj", "{F836A599-214F-4781-B8EA-9CCA9D7321FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Application", "JazzGuitarTabs.Application\JazzGuitarTabs.Application.csproj", "{F836A599-214F-4781-B8EA-9CCA9D7321FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.Application.Test", "JazzGuitarTabs.Application.Test\JazzGuitarTabs.Application.Test.csproj", "{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F836A599-214F-4781-B8EA-9CCA9D7321FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
