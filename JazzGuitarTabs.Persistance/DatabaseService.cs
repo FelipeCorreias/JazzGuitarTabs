@@ -11,7 +11,7 @@ namespace JazzGuitarTabs.Persistance
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(@"User ID=postgres;Password=xxxxx;Host=xxxxxx;Port=5432;Database=xxxxx;Pooling=true;");
+            optionsBuilder.UseNpgsql(@"User ID=xxxx;Password=xxxx;Host=xxxx;Port=5432;Database=JazzGuitarTabs;Pooling=true;");
         }
 
 

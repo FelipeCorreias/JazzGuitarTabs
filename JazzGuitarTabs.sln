@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Persistance"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Application", "JazzGuitarTabs.Application\JazzGuitarTabs.Application.csproj", "{F836A599-214F-4781-B8EA-9CCA9D7321FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.Application.Test", "JazzGuitarTabs.Application.Test\JazzGuitarTabs.Application.Test.csproj", "{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Application.Test", "JazzGuitarTabs.Application.Test\JazzGuitarTabs.Application.Test.csproj", "{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzGuitarTabs.Web", "JazzGuitarTabs.Web\JazzGuitarTabs.Web.csproj", "{EA25462E-0F93-41A7-BE76-34637CCBF18A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzGuitarTabs.IoC", "JazzGuitarTabs.IoC\JazzGuitarTabs.IoC.csproj", "{ADFB4866-543D-494A-9FCF-04F8848BE8DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C319EBB-922B-4ADB-887A-F2B931AEDCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA25462E-0F93-41A7-BE76-34637CCBF18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA25462E-0F93-41A7-BE76-34637CCBF18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA25462E-0F93-41A7-BE76-34637CCBF18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA25462E-0F93-41A7-BE76-34637CCBF18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADFB4866-543D-494A-9FCF-04F8848BE8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFB4866-543D-494A-9FCF-04F8848BE8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFB4866-543D-494A-9FCF-04F8848BE8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFB4866-543D-494A-9FCF-04F8848BE8DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,14 +20,16 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist
 
         public List<TabModel> Execute(string artist)
         {
-            var tabs = _db.FindAll(t => t.Artist == artist).Select(t => new TabModel() {
+            artist = artist.Replace("-", " ");
+            var tabs = _db.FindAll(t => t.Artist.ToUpper().Contains(artist.ToUpper()) && t.IsApproved).Select(t => new TabModel() {
+                Id = t.Id,
                 Title = t.Title,
                 Artist = t.Artist,
                 Author = t.Author,
-                File = t.File,
                 FileName = t.FileName,
                 Style = t.Style,
-                Tags = t.Tags
+                Tags = t.Tags,
+                IsApproved = t.IsApproved
             });
             return tabs.ToList();
         }

@@ -7,6 +7,6 @@ namespace JazzGuitarTabs.Application.Tabs.Commands.CreateTab
 {
    public interface ICreateTabCommand
     {
-        void Execute(TabModel tabModel);
+        void Execute(TabModel tabModel, byte[] file);
     }
 }

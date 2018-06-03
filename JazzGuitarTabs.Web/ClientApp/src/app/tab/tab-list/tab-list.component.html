@@ -1,0 +1,27 @@
+<h1>Tabs</h1>
+
+
+<p *ngIf="!tabs"><em>Loading...</em></p>
+
+<table class='table' *ngIf="tabs">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Style</th>
+      <th>Author</th>
+      <th>Tags</th>
+      <th>File</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tab of tabs">
+      <td>{{ tab.title }}</td>
+      <td>{{ tab.artist }}</td>
+      <td>{{ tab.style }}</td>
+      <td>{{ tab.author }}</td>
+      <td>{{ tab.tags }}</td>
+      <td><a href="{{getTabFile(tab.id)}}">{{ tab.fileName }}</a></td>
+    </tr>
+  </tbody>
+</table>

@@ -16,7 +16,7 @@ namespace JazzGuitarTabs.Application.Tabs.Commands.CreateTab
             _db = db;
         }
 
-        public void Execute(TabModel tabModel)
+        public void Execute(TabModel tabModel, byte[] file)
         {
             var tab = new Tab
             {
@@ -24,8 +24,8 @@ namespace JazzGuitarTabs.Application.Tabs.Commands.CreateTab
                 Artist = tabModel.Artist,
                 Author = tabModel.Author,
                 Style = tabModel.Style,
-                File = tabModel.File,
                 FileName = tabModel.FileName,
+                File = file,
                 Tags = tabModel.Tags
             };
 

@@ -11,7 +11,6 @@ namespace JazzGuitarTabs.Application.Tabs.Models
         public string Artist { get; set; }
         public string Style { get; set; }
         public string FileName { get; set; }
-        public byte[] File { get; set; }
         public string Tags { get; set; }
         public string Author { get; set; }
         public bool IsApproved { get; set; }
