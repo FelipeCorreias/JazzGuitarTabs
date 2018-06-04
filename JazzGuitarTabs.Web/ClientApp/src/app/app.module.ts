@@ -11,6 +11,7 @@ import { TabComponent } from './tab/tab.component';
 import { TabListComponent } from './tab/tab-list/tab-list.component';
 import { TabCreateComponent } from './tab/tab-create/tab-create.component';
 import { TabService } from './shared/services/tab.service';
+import { ArtistService } from './shared/services/artist.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { TabService } from './shared/services/tab.service';
       { path: 'tab/list/:artist', component: TabListComponent }
     ])
   ],
-  providers: [TabService],
+  providers: [TabService, ArtistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

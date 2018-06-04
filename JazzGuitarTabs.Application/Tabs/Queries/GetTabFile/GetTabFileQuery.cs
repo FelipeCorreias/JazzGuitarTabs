@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabFileQuery
+namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabFile
 {
     public class GetTabFileQuery : IGetTabFileQuery
     {

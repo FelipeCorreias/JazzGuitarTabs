@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using JazzGuitarTabs.Application.Tabs.Commands.CreateTab;
 using JazzGuitarTabs.Application.Tabs.Models;
-using JazzGuitarTabs.Application.Tabs.Queries.GetTabFileQuery;
+using JazzGuitarTabs.Application.Tabs.Queries.GetTabDetail;
+using JazzGuitarTabs.Application.Tabs.Queries.GetTabFile;
 using JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,16 +19,19 @@ namespace JazzGuitarTabs.Web.Controllers
     {
         private readonly IGetTabsListByArtistQuery _getTabsByArtist;
         private readonly ICreateTabCommand _createTab;
-        private readonly IGetTabFileQuery _getTabFileQuery;
+        private readonly IGetTabFileQuery _getTabFile;
+        private readonly IGetTabDetailQuery _getTabDetail;
 
 
         public TabController(IGetTabsListByArtistQuery getTabsByArtist,
             ICreateTabCommand createTab,
-            IGetTabFileQuery getTabFileQuery)
+            IGetTabFileQuery getTabFile,
+            IGetTabDetailQuery getTabDetail)
         {
             _getTabsByArtist = getTabsByArtist;
             _createTab = createTab;
-            _getTabFileQuery = getTabFileQuery;
+            _getTabFile = getTabFile;
+            _getTabDetail = getTabDetail;
         }
 
         [HttpGet("Artist/{artist}")]
@@ -37,12 +41,12 @@ namespace JazzGuitarTabs.Web.Controllers
         }
 
         // GET: api/Tab/5/File
-        [HttpGet("{id}/File", Name = "GetFile")]
+        [HttpGet("{id}/File")]
         public FileResult GetFile(int id, string file)
         {
-            var tabFile = _getTabFileQuery.Execute(id);
-            //var patch = _getPatch.Execute(id);
-            return File(tabFile, "application/pdf", "tab.pdf");
+            var tabFile = _getTabFile.Execute(id);
+            var tab = _getTabDetail.Execute(id);
+            return File(tabFile, "application/pdf", tab.FileName);
         }
 
         // POST: api/Tab

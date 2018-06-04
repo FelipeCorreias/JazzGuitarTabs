@@ -1,4 +1,6 @@
-﻿using JazzGuitarTabs.Domain.Tabs;
+﻿using JazzGuitarTabs.Domain.Artists;
+using JazzGuitarTabs.Domain.Tabs;
+using JazzGuitarTabs.Persistance.Artists;
 using JazzGuitarTabs.Persistance.Tabs;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +10,7 @@ namespace JazzGuitarTabs.Persistance
     public class DatabaseService : DbContext
     {
         public DbSet<Tab> Tabs { get; set; }
+        public DbSet<Artist> Artist { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -20,6 +23,7 @@ namespace JazzGuitarTabs.Persistance
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new TabConfiguration());
+            modelBuilder.ApplyConfiguration(new ArtistConfiguration());
 
         }
     }

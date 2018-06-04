@@ -13,7 +13,6 @@ namespace JazzGuitarTabs.Persistance.Tabs
         {
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Title).HasMaxLength(255);
-            builder.Property(c => c.Artist).HasMaxLength(255);
             builder.Property(c => c.Style).HasMaxLength(255);
         }
     }

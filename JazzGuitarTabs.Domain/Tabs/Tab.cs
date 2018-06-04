@@ -1,4 +1,5 @@
-﻿using JazzGuitarTabs.Domain.Common;
+﻿using JazzGuitarTabs.Domain.Artists;
+using JazzGuitarTabs.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;

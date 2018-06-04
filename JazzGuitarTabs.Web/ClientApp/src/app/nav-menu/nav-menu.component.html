@@ -12,11 +12,14 @@
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
             <ul class='nav navbar-nav'>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/tab/list/wes-montgomery"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Wes Montgomery
-                    </a>
-                </li>
+
+
+              <li *ngFor="let artist of artists" [routerLinkActive]='["link-active"]'>
+                <!--<a [routerLink]='["/tab/list/"]' (click)='collapse()'>-->
+                <a routerLink="/tab/list/{{artist.name.replace(' ','-').toLowerCase()}}" (click)='collapse()'>
+                  <span class='glyphicon glyphicon-th-list'></span> {{artist.name}}
+                </a>
+              </li>
             </ul>
         </div>
     </div>
