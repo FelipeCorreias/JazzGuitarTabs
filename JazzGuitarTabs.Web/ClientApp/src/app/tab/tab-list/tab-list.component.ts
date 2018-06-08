@@ -9,6 +9,7 @@ import { Tab } from '../../shared/models/tab.model';
   styleUrls: ['./tab-list.component.css']
 })
 export class TabListComponent implements OnInit {
+  dtOptions: any = {};
   public tabs: Tab[];
   public _tabService: TabService;
   public _route: ActivatedRoute;
@@ -19,6 +20,9 @@ export class TabListComponent implements OnInit {
   }
 
   ngOnInit() {
+
+
+
     this._route.params.subscribe(params => {
       this.tabs = null;
       if (params['artist'] != null) {
@@ -27,6 +31,11 @@ export class TabListComponent implements OnInit {
         //this.getTabs();
       }
     });
+
+    this.dtOptions = {
+      pageLength: 20,
+      responsive: true
+    };
   }
 
   getTabsByArtist(artist: string) {
