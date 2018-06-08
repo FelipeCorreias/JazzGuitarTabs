@@ -31,7 +31,7 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist
                 Tags = t.Tags,
                 IsApproved = t.IsApproved
             });
-            return tabs.ToList();
+            return tabs.OrderBy(x => x.Title).ToList();
         }
     }
 }
