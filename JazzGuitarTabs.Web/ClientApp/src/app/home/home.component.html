@@ -1,6 +1,23 @@
-<h1>About</h1>
-<p>Welcome to jazz guitar tabs!</p>
-<p>
-  This collection gathers tablatures and musical scores written for guitarists.
-</p>
-<p>Enjoy!</p>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card text-white bg-dark mb-3 h-100">
+      <div class="card-header">About</div>
+      <div class="card-body">
+        <h4 class="card-title">Welcome to jazz guitar tabs</h4>
+        <p class="card-text">This collection gathers tablatures and musical scores written for guitarists.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card text-white bg-dark mb-3 h-100">
+      <div class="card-header">Artists</div>
+      <div class="card-body">
+        <p *ngIf="!artists"><em>Loading...</em></p>
+        <a *ngFor="let artist of artists" class="badge badge-pill badge-info" style="margin:1px;" routerLink="/tab/list/{{artist.name.replace(' ','-').toLowerCase()}}">{{artist.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -3,7 +3,7 @@
 
 <p *ngIf="!tabs"><em>Loading...</em></p>
 
-<table datatable [dtOptions]="dtOptions"  class="table table-striped table-bordered" *ngIf="tabs">
+<table datatable [dtOptions]="dtOptions"  class="table table-hover" *ngIf="tabs">
   <thead>
     <tr>
       <th>Title</th>
@@ -19,7 +19,7 @@
       <td>{{ tab.artist }}</td>
       <td>{{ tab.style }}</td>
       <td>{{ tab.author }}</td>
-      <td><a href="{{getTabFile(tab.id)}}">{{ tab.fileName }}</a></td>
+      <td><a href="{{getTabFile(tab.id)}}" class="btn btn-info">DOWNLOAD</a></td>
     </tr>
   </tbody>
 </table>

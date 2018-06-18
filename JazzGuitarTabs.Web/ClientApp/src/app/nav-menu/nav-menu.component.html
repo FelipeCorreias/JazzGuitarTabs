@@ -1,28 +1,23 @@
-<div class='main-nav'>
-  <div class='navbar navbar-inverse'>
-    <div class='navbar-header'>
-      <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse' [attr.aria-expanded]='isExpanded' (click)='toggle()'>
-        <span class='sr-only'>Toggle navigation</span>
-        <span class='icon-bar'></span>
-        <span class='icon-bar'></span>
-        <span class='icon-bar'></span>
-      </button>
-      <a class='navbar-brand' [routerLink]='["/"]'>Jazz Guitar Tabs</a>
-    </div>
-    <div class='clearfix'></div>
-    
-    <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
-      <p *ngIf="!artists"><em>Loading...</em></p>
-      <ul class='nav navbar-nav'>
-
-
-        <li *ngFor="let artist of artists" [routerLinkActive]='["link-active"]'>
-          <!--<a [routerLink]='["/tab/list/"]' (click)='collapse()'>-->
-          <a routerLink="/tab/list/{{artist.name.replace(' ','-').toLowerCase()}}" (click)='collapse()'>
-            <span class='glyphicon glyphicon-th-list'></span> {{artist.name}}
-          </a>
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a [routerLink]='["/"]' class="navbar-brand">Jazz Guitar Tabs</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Artists <span class="caret"></span></a>
+          <div class="dropdown-menu" aria-labelledby="themes">
+            <p *ngIf="!artists"><em>Loading...</em></p>
+            <a *ngFor="let artist of artists" class="dropdown-item" routerLink="/tab/list/{{artist.name.replace(' ','-').toLowerCase()}}">{{artist.name}}</a>
+          </div>
         </li>
       </ul>
+      <!--<form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" placeholder="Search" type="text">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>-->
     </div>
   </div>
 </div>

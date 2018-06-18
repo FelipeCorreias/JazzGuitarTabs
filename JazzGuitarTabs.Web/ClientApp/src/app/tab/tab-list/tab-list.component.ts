@@ -33,7 +33,7 @@ export class TabListComponent implements OnInit {
     });
 
     this.dtOptions = {
-      pageLength: 20,
+      pageLength: 25,
       responsive: true
     };
   }
