@@ -7,6 +7,7 @@ using JazzGuitarTabs.Application.Tabs.Commands.CreateTab;
 using JazzGuitarTabs.Application.Tabs.Models;
 using JazzGuitarTabs.Application.Tabs.Queries.GetTabDetail;
 using JazzGuitarTabs.Application.Tabs.Queries.GetTabFile;
+using JazzGuitarTabs.Application.Tabs.Queries.GetTabsListLast;
 using JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,23 +22,32 @@ namespace JazzGuitarTabs.Web.Controllers
         private readonly ICreateTabCommand _createTab;
         private readonly IGetTabFileQuery _getTabFile;
         private readonly IGetTabDetailQuery _getTabDetail;
+        private readonly IGetTabsListLastQuery _getTabsLast;
 
 
         public TabController(IGetTabsListByArtistQuery getTabsByArtist,
             ICreateTabCommand createTab,
             IGetTabFileQuery getTabFile,
-            IGetTabDetailQuery getTabDetail)
+            IGetTabDetailQuery getTabDetail,
+            IGetTabsListLastQuery getTabsLast)
         {
             _getTabsByArtist = getTabsByArtist;
             _createTab = createTab;
             _getTabFile = getTabFile;
             _getTabDetail = getTabDetail;
+            _getTabsLast = getTabsLast;
         }
 
         [HttpGet("Artist/{artist}")]
         public IEnumerable<TabModel> GetTabsByArtist(string artist)
         {
             return _getTabsByArtist.Execute(artist);
+        }
+
+        [HttpGet("Last/{top}")]
+        public IEnumerable<TabModel> GetTabsLast(int top)
+        {
+            return _getTabsLast.Execute(top);
         }
 
         // GET: api/Tab/5/File

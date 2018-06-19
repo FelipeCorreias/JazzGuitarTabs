@@ -14,6 +14,10 @@ export class TabService {
     return this._http.get<Tab[]>('/api/Tab/Artist/' + artist);
   }
 
+  getTabsListLastTwenty() {
+    return this._http.get<Tab[]>('/api/Tab/Last/20');
+  }
+
   getTabFile(id: number): string {
     return ('/api/Tab/' + id + '/File');
   }
