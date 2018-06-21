@@ -6,4 +6,5 @@ export class Tab {
   FileName: string;
   Author: string;
   Tags: string;
+  Alias: string;
 }

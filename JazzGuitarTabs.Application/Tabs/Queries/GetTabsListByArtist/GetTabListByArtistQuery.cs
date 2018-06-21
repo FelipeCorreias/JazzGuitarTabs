@@ -5,6 +5,7 @@ using JazzGuitarTabs.Application.Interfaces;
 using JazzGuitarTabs.Application.Tabs.Models;
 using JazzGuitarTabs.Domain.Tabs;
 using System.Linq;
+using JazzGuitarTabs.Common.Strings;
 
 namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist
 {
@@ -12,10 +13,12 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist
     {
 
         private readonly IRepository<Tab> _db;
+        private readonly IStringService _stringService;
 
-        public GetTabListByArtistQuery(IRepository<Tab> db)
+        public GetTabListByArtistQuery(IRepository<Tab> db, IStringService stringService)
         {
             _db = db;
+            _stringService = stringService;
         }
 
         public List<TabModel> Execute(string artist)
@@ -29,7 +32,8 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist
                 FileName = t.FileName,
                 Style = t.Style,
                 Tags = t.Tags,
-                IsApproved = t.IsApproved
+                IsApproved = t.IsApproved,
+                Alias = _stringService.GenerateSlug(t.Title)
             });
             return tabs.OrderBy(x => x.Title).ToList();
         }

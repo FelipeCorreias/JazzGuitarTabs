@@ -10,6 +10,10 @@ export class TabService {
     this._http = http;
   }
 
+  gertTab(id: number) {
+    return this._http.get<Tab>('/api/Tab/' + id)
+  }
+
   getTabsListByArtist(artist: string) {
     return this._http.get<Tab[]>('/api/Tab/Artist/' + artist);
   }

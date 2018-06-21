@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JazzGuitarTabs.Common\JazzGuitarTabs.Common.csproj" />
     <ProjectReference Include="..\JazzGuitarTabs.Domain\JazzGuitarTabs.Domain.csproj" />
   </ItemGroup>
 

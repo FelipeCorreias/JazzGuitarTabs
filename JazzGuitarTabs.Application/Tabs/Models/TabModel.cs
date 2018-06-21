@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JazzGuitarTabs.Common.Strings;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,5 +15,6 @@ namespace JazzGuitarTabs.Application.Tabs.Models
         public string Tags { get; set; }
         public string Author { get; set; }
         public bool IsApproved { get; set; }
+        public string Alias { get; set; }
     }
 }

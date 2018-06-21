@@ -19,7 +19,7 @@
       <div class="card-header">Recent Add</div>
       <div class="card-body">
         <p *ngIf="!tabs"><em>Loading...</em></p>
-        <a *ngFor="let tab of tabs" class="badge badge-pill badge-dark" style="margin:1px;" routerLink="/tab/detail/{{tab.id}}">{{tab.title}} - {{tab.artist}}</a>
+        <a *ngFor="let tab of tabs" class="badge badge-pill badge-dark" style="margin:1px;" routerLink="/tab/{{tab.id}}/{{tab.alias}}">{{tab.title}} - {{tab.artist}}</a>
       </div>
     </div>
   </div>

@@ -18,12 +18,12 @@ namespace JazzGuitarTabs.Application.Test
         [TestMethod]
         public void TestMethod1()
         {
-            DatabaseService db = new DatabaseService();
-            Repository<Tab> rep = new Repository<Tab>(db);
-            CreateTabCommand create = new CreateTabCommand(rep);
-            TabModel tab = new TabModel();
+            //DatabaseService db = new DatabaseService();
+            //Repository<Tab> rep = new Repository<Tab>(db);
+            //CreateTabCommand create = new CreateTabCommand(rep);
+            //TabModel tab = new TabModel();
 
-            tab.Title = "teste";
+            //tab.Title = "teste";
 
 
             //create.Execute(tab);

@@ -2,6 +2,7 @@
 using System.Linq;
 using JazzGuitarTabs.Application.Interfaces;
 using JazzGuitarTabs.Application.Tabs.Models;
+using JazzGuitarTabs.Common.Strings;
 using JazzGuitarTabs.Domain.Tabs;
 
 namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListLast
@@ -9,10 +10,12 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListLast
     public class GetTabsListLastQuery : IGetTabsListLastQuery
     {
         private readonly IRepository<Tab> _db;
+        private readonly IStringService _stringService;
 
-        public GetTabsListLastQuery(IRepository<Tab> db)
+        public GetTabsListLastQuery(IRepository<Tab> db, IStringService stringService)
         {
             _db = db;
+            _stringService = stringService;
         }
 
         List<TabModel> IGetTabsListLastQuery.Execute(int top)
@@ -26,7 +29,8 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListLast
                 FileName = t.FileName,
                 Style = t.Style,
                 Tags = t.Tags,
-                IsApproved = t.IsApproved
+                IsApproved = t.IsApproved,
+                Alias = _stringService.GenerateSlug(t.Title)
             });
             return tabs.ToList();
         }

@@ -38,6 +38,12 @@ namespace JazzGuitarTabs.Web.Controllers
             _getTabsLast = getTabsLast;
         }
 
+        // GET: api/Tab/5
+        [HttpGet("{id}")]
+        public TabModel Get(int id) {
+            return _getTabDetail.Execute(id);
+        }
+
         [HttpGet("Artist/{artist}")]
         public IEnumerable<TabModel> GetTabsByArtist(string artist)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using JazzGuitarTabs.Application.Interfaces;
 using JazzGuitarTabs.Application.Tabs.Models;
+using JazzGuitarTabs.Common.Strings;
 using JazzGuitarTabs.Domain.Tabs;
 
 namespace JazzGuitarTabs.Application.Tabs.Commands.CreateTab
@@ -26,7 +27,7 @@ namespace JazzGuitarTabs.Application.Tabs.Commands.CreateTab
                 Style = tabModel.Style,
                 FileName = tabModel.FileName,
                 File = file,
-                Tags = tabModel.Tags
+                Tags = tabModel.Tags,
             };
 
             _db.Add(tab);

@@ -14,6 +14,7 @@ import { TabListComponent } from './tab/tab-list/tab-list.component';
 import { TabCreateComponent } from './tab/tab-create/tab-create.component';
 import { TabService } from './shared/services/tab.service';
 import { ArtistService } from './shared/services/artist.service';
+import { TabDetailComponent } from './tab/tab-detail/tab-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ArtistService } from './shared/services/artist.service';
     HomeComponent,
     TabComponent,
     TabListComponent,
-    TabCreateComponent
+    TabCreateComponent,
+    TabDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +33,7 @@ import { ArtistService } from './shared/services/artist.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'tab', component: TabComponent },
+      { path: 'tab/:id/:alias', component: TabDetailComponent },
       { path: 'tab/list/:artist', component: TabListComponent }
     ])
   ],
