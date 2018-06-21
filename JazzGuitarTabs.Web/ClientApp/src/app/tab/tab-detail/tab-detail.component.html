@@ -1,3 +1,8 @@
-<p>
-  tab-detail works!
-</p>
+<div class="card bg-secondary mb-3" *ngIf="tab">
+  <div class="card-header">Tab</div>
+  <div class="card-body">
+    <h4 class="card-title">{{tab.title}}</h4>
+    <h5 class="card-title">{{tab.artist}}</h5>
+    <p class="card-text"><a href="{{getTabFile(tab.id)}}" class="btn btn-warning">DOWNLOAD</a></p>
+  </div>
+</div>

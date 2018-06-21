@@ -19,10 +19,10 @@ namespace JazzGuitarTabs.Application.Artists.Queries.GetArtistsList
 
         public List<ArtistModel> Execute()
         {
-            return _db.FindAll(t => t.IsApproved).GroupBy(t => t.Artist).Select(t => new ArtistModel()
+            return _db.FindBy(t => t.IsApproved).OrderBy(t => t.Artist).GroupBy(t => t.Artist).Select(t => new ArtistModel()
             {
                 Name = t.FirstOrDefault().Artist
-            }).OrderBy(t => t.Name).ToList();
+            }).ToList();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListByArtist
         public List<TabModel> Execute(string artist)
         {
             artist = artist.Replace("-", " ");
-            var tabs = _db.FindAll(t => t.Artist.ToUpper().Contains(artist.ToUpper()) && t.IsApproved).Select(t => new TabModel() {
+            var tabs = _db.FindBy(t => t.Artist.ToUpper().Contains(artist.ToUpper()) && t.IsApproved).Select(t => new TabModel() {
                 Id = t.Id,
                 Title = t.Title,
                 Artist = t.Artist,

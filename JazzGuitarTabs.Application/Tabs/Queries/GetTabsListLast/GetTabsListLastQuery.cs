@@ -20,7 +20,7 @@ namespace JazzGuitarTabs.Application.Tabs.Queries.GetTabsListLast
 
         List<TabModel> IGetTabsListLastQuery.Execute(int top)
         {
-            var tabs = _db.FindAll(t => t.IsApproved).OrderByDescending(t => t.Id).Take(top).Select(t => new TabModel()
+            var tabs = _db.FindBy(t => t.IsApproved).OrderByDescending(t => t.Id).Take(top).Select(t => new TabModel()
             {
                 Id = t.Id,
                 Title = t.Title,
